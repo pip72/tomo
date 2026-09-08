@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Motivation Calculator</title>
+    <title>Total Motivation Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -246,7 +246,7 @@
             <!-- Results Section Hidden Initially -->
             <div id="resultsCard" class="hidden mt-10 p-6 bg-gray-50 border border-gray-200 rounded-xl space-y-6">
                 <div class="text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Your Motivation Score</h3>
+                    <h3 class="text-xl font-bold text-gray-900">Your Total Motivation Score</h3>
                     <p class="text-xs text-gray-500 mt-1">Scale ranges from -100 to +100</p>
                 </div>
 
@@ -267,7 +267,7 @@
                 <!-- Reset Button -->
                 <div class="text-center pt-2">
                     <button id="resetBtn" type="button" class="inline-flex items-center px-5 py-2.5 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
-                        Reset Framework & Retake
+                        Reset and Retake
                     </button>
                 </div>
             </div>
@@ -319,7 +319,7 @@
                     finalScore += ans * weights[index];
                 });
 
-                // Calculate percentage placement on meter (-66.64 to +66.64)
+                // Calculate percentage placement on meter
                 const percentage = ((finalScore + maxPossible) / (maxPossible * 2)) * 100;
                 
                 // Update text display
