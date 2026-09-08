@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Motivation Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+        
+        <!-- Header -->
+        <div class="bg-indigo-600 px-6 py-8 text-center text-white">
+            <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">Work Motivation Calculator</h1>
+            <p class="mt-2 text-indigo-100 text-sm sm:text-base">Evaluate your structural workplace drivers instantly.</p>
+        </div>
+
+        <!-- Form Context -->
+        <div class="p-6 sm:p-10">
+            <div class="mb-6 bg-blue-50 border border-blue-200 text-blue-800 rounded-lg p-4 text-sm leading-relaxed">
+                <strong>Instructions:</strong> Please select a number from <strong>1 to 7</strong> for each statement below based on how accurately it describes your situation:
+                <div class="grid grid-cols-3 gap-2 mt-2 font-medium text-center text-xs">
+                    <span class="bg-blue-100 p-1 rounded">1 = Strongly Disagree</span>
+                    <span class="bg-blue-100 p-1 rounded">4 = Neutral</span>
+                    <span class="bg-blue-100 p-1 rounded">7 = Strongly Agree</span>
+                </div>
+            </div>
+
+            <form id="surveyForm" class="space-y-8">
+                <!-- Q1 -->
+                <div class="border-b border-gray-100 pb-6">
+                    <p class="text-gray-900 font-medium mb-4">1. I continue to work at my current job because the work itself is fun to do.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q1" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border-b border-gray-100 pb-6">
+                    <p class="text-gray-900 font-medium mb-4">2. I continue to work at my current job because I believe the work has an important purpose.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q2" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border-b border-gray-100 pb-6">
+                    <p class="text-gray-900 font-medium mb-4">3. I continue to work at my current job because this type of work will help me reach my personal goals.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q3" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="border-b border-gray-100 pb-6">
+                    <p class="text-gray-900 font-medium mb-4">4. I continue to work at my current job because if I didn't, I would disappoint myself or people I care about.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q4" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="border-b border-gray-100 pb-6">
+                    <p class="text-gray-900 font-medium mb-4">5. I continue to work at my current job because without this job I would be worried I couldn't reach my financial objectives.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q5" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="pb-4">
+                    <p class="text-gray-900 font-medium mb-4">6. There is no good reason why I continue to work at my current job.</p>
+                    <div class="flex justify-between items-center max-w-md mx-auto gap-1 sm:gap-2">
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="1" required class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">1</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="2" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">2</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="3" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">3</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="4" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">4</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="5" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">5</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="6" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">6</span>
+                        </label>
+                        <label class="flex flex-col items-center cursor-pointer group">
+                            <input type="radio" name="q6" value="7" class="sr-only peer">
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border-2 border-gray-200 text-gray-700 font-semibold text-sm peer-checked:border-indigo-600 peer-checked:bg-indigo-600 peer-checked:text-white transition-all group-hover:border-gray-300">7</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Results Section Hidden Initially -->
+            <div id="resultsCard" class="hidden mt-10 p-6 bg-gray-50 border border-gray-200 rounded-xl space-y-6">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-gray-900">Your Motivation Score</h3>
+                    <p class="text-xs text-gray-500 mt-1">Scale ranges from -66.64 to +66.64</p>
+                </div>
+
+                <!-- Visual Meter Gauge -->
+                <div class="relative pt-4">
+                    <div class="w-full bg-gray-200 h-4 rounded-full overflow-hidden flex">
+                        <div id="meterFill" class="h-full transition-all duration-500 ease-out" style="width: 50%;"></div>
+                    </div>
+                    <!-- Indicator Needle / Marker -->
+                    <div id="meterNeedle" class="absolute top-3 w-1 h-6 bg-gray-900 transition-all duration-500 ease-out" style="left: 50%;"></div>
+                </div>
+
+                <!-- Score Text -->
+                <div class="text-center">
+                    <span id="scoreValue" class="text-4xl font-extrabold text-indigo-600">0.00</span>
+                </div>
+
+                <!-- Reset Button -->
+                <div class="text-center pt-2">
+                    <button id="resetBtn" type="button" class="inline-flex items-center px-5 py-2.5 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+                        Reset Framework & Retake
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('surveyForm');
+        const resultsCard = document.getElementById('resultsCard');
+        const scoreValue = document.getElementById('scoreValue');
+        const meterFill = document.getElementById('meterFill');
+        const meterNeedle = document.getElementById('meterNeedle');
+        const resetBtn = document.getElementById('resetBtn');
+
+        const weights = [10, 5, 1.66, -1.66, -5, -10];
+        const maxPossible = 66.64;
+
+        function getColorForScore(percentage) {
+            // Simple interpolation from Red (low) to Yellow (mid) to Green (high)
+            if (percentage < 50) {
+                // Red to Yellow
+                const r = 239;
+                const g = Math.round(68 + (150 * (percentage / 50)));
+                const b = 68;
+                return `rgb(${r}, ${g}, ${b})`;
+            } else {
+                // Yellow to Green
+                const r = Math.round(239 - (217 * ((percentage - 50) / 50)));
+                const g = 197;
+                const b = 68;
+                return `rgb(${r}, ${g}, ${b})`;
+            }
+        }
+
+        form.addEventListener('change', () => {
+            const formData = new FormData(form);
+            const answers = [];
+            
+            for (let i = 1; i <= 6; i++) {
+                const val = formData.get(`q${i}`);
+                if (val) answers.push(Number(val));
+            }
+
+            // Reveal only when all 6 answers are populated
+            if (answers.length === 6) {
+                let finalScore = 0;
+                answers.forEach((ans, index) => {
+                    finalScore += ans * weights[index];
+                });
+
+                // Calculate percentage placement on meter (-66.64 to +66.64)
+                const percentage = ((finalScore + maxPossible) / (maxPossible * 2)) * 100;
+                
+                // Update text display
+                scoreValue.textContent = finalScore.toFixed(2);
+                
+                // Match meter needle and live bar fill color
+                meterFill.style.width = `${percentage}%`;
+                meterFill.style.backgroundColor = getColorForScore(percentage);
+                meterNeedle.style.left = `${percentage}%`;
+                
+                // Show results
+                resultsCard.classList.remove('hidden');
+                resultsCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            form.reset();
+            resultsCard.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
